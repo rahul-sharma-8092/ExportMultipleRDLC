@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Games" targetNamespace="http://tempuri.org/Games.xsd" xmlns:mstns="http://tempuri.org/Games.xsd" xmlns="http://tempuri.org/Games.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Games" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Games" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Games">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GameName" msprop:Generator_UserColumnName="GameName" msprop:Generator_ColumnPropNameInTable="GameNameColumn" msprop:Generator_ColumnPropNameInRow="GameName" msprop:Generator_ColumnVarNameInTable="columnGameName" type="xs:string" minOccurs="0" />
+              <xs:element name="PCorMobile" msprop:Generator_UserColumnName="PCorMobile" msprop:Generator_ColumnPropNameInTable="PCorMobileColumn" msprop:Generator_ColumnPropNameInRow="PCorMobile" msprop:Generator_ColumnVarNameInTable="columnPCorMobile" type="xs:string" minOccurs="0" />
+              <xs:element name="Rating" msprop:Generator_UserColumnName="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" type="xs:int" minOccurs="0" />
+              <xs:element name="Multiplayer" msprop:Generator_UserColumnName="Multiplayer" msprop:Generator_ColumnPropNameInTable="MultiplayerColumn" msprop:Generator_ColumnPropNameInRow="Multiplayer" msprop:Generator_ColumnVarNameInTable="columnMultiplayer" type="xs:string" minOccurs="0" />
+              <xs:element name="MinRequirements" msprop:Generator_UserColumnName="MinRequirements" msprop:Generator_ColumnPropNameInTable="MinRequirementsColumn" msprop:Generator_ColumnPropNameInRow="MinRequirements" msprop:Generator_ColumnVarNameInTable="columnMinRequirements" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
