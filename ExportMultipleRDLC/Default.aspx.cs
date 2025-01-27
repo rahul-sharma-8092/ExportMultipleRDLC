@@ -1,5 +1,6 @@
 ﻿using Microsoft.Reporting.WebForms;
 using OfficeOpenXml;
+using OfficeOpenXml.Drawing;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -153,6 +154,29 @@ namespace ExportMultipleRDLC
                             for (int row = tempSheet.Dimension.Start.Row; row <= tempSheet.Dimension.End.Row; row++)
                             {
                                 worksheet.Row(row).Height = tempSheet.Row(row).Height;
+                            }
+
+                            // Copy worksheet image
+                            foreach (var drawing in tempSheet.Drawings)
+                            {
+                                if (drawing is ExcelPicture sourcePicture)
+                                {
+                                    var picture = worksheet.Drawings.AddPicture(sourcePicture.Name, sourcePicture.Image);
+
+                                    // Set the position (row, column, and offsets)
+                                    picture.SetPosition(
+                                        sourcePicture.From.Row, sourcePicture.From.RowOff,
+                                        sourcePicture.From.Column, sourcePicture.From.ColumnOff
+                                    );
+
+                                    var widthField = typeof(ExcelPicture).GetField("_width", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                                    var heightField = typeof(ExcelPicture).GetField("_height", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
+                                    int width = (int)widthField.GetValue(sourcePicture);
+                                    int height = (int)heightField.GetValue(sourcePicture);
+
+                                    picture.SetSize(width, height);
+                                }
                             }
 
                             // Copy worksheet properties (optional)
